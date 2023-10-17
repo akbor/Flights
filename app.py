@@ -5,4 +5,5 @@ url = r"https://www.sydneyairport.com.au/_a/flights?flightType=arrival&terminalT
 
 response = requests.get(url)
 
-st.write(response.data.to_json())
+if response.ok:
+    st.write(response.json())
