@@ -9,5 +9,4 @@ response = requests.get(url)
 if response.ok:
     # st.write(response.json())
     
-    tbl = pd.read_json(response.json())
-    
+    tbl = pd.read_json(response.content)
